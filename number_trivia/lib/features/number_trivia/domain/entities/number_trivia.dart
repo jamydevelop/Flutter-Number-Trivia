@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 //import 'package:flutter/material.dart';
 
-class NumberTrivia extends Equatable {
+class NumberTriviaEntity extends Equatable {
   final String text;
   final int number;
 
-  const NumberTrivia({
+  const NumberTriviaEntity({
     required this.number,
     required this.text,
   });

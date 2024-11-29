@@ -9,8 +9,8 @@ class MockNumberTriviaRepository extends Mock
     implements NumberTriviaRepository {}
 
 void main() {
-  GetConcreteNumberTriviaUsecase usecase;
-  MockNumberTriviaRepository mockNumberTriviaRepository;
+  late GetConcreteNumberTriviaUsecase usecase;
+  late MockNumberTriviaRepository mockNumberTriviaRepository;
 
   setUp(() {
     mockNumberTriviaRepository = MockNumberTriviaRepository();
@@ -27,7 +27,7 @@ void main() {
       // "On the fly" implementation of the Repository using the Mockito package.
       // When getConcreteNumberTrivia is called with any argument, always answer with
       // the Right "side" of Either containing a test NumberTrivia object.
-      when(mockNumberTriviaRepository.getConcreteNumberTrivia(any))
+      when(mockNumberTriviaRepository.getConcreteNumberTrivia(5))
           .thenAnswer((_) async => const Right(tNumberTrivia));
       // The "act" phase of the test. Call the not-yet-existent method.
       final result = await usecase.execute(number: tNumber);

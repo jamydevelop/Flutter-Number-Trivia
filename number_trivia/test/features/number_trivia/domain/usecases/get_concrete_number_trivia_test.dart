@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:number_trivia/features/number_trivia/domain/entities/number_trivia.entity.dart';
 import 'package:number_trivia/features/number_trivia/domain/repositories/number_trivia_repository.dart';
@@ -9,7 +8,6 @@ import 'package:number_trivia/features/number_trivia/domain/usecases/get_concret
 class MockNumberTriviaRepository extends Mock
     implements NumberTriviaRepository {}
 
-@GenerateNiceMocks([MockSpec<NumberTriviaRepository>()])
 void main() {
   late GetConcreteNumberTriviaUsecase usecase;
   late MockNumberTriviaRepository mockNumberTriviaRepository;
